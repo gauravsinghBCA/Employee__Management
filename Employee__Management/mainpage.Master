@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mainpage.master.cs" Inherits="Employee__Management.mainpage" %>
+
+<%@ Register Src="~/header.ascx" TagName="myheader" TagPrefix="asp" %>
+<%@ Register Src="~/footer.ascx" TagName="myfooter" TagPrefix="asp" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:myheader id="header" runat="server"></asp:myheader>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                               
+
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height: 300px; vertical-align: top; background-color:lightsteelblue">
+                        <center>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:myfooter id="myfooter" runat="server"></asp:myfooter>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
